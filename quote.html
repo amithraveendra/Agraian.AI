@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry Form</title>
+    <link rel="stylesheet" href="form2.css">
+</head>
+<body>
+    <h1>Agri-Input Form</h1>
+    <form id="dataForm" onsubmit="submitForm(event)">
+        <div class="form-group">
+            <label for="accountNumber">Account Number:</label>
+            <input type="text" id="accountNumber" name="accountNumber" required>
+        </div>
+        <div class="form-group">
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+        <div class="form-group">
+            <label for="marketDistrict">Market/District:</label>
+            <input type="text" id="marketDistrict" name="marketDistrict" required>
+        </div>
+        <div class="form-group">
+            <label for="commodity">Commodity:</label>
+            <input type="text" id="commodity" name="commodity" required>
+        </div>
+        <div class="form-group">
+            <label for="priceQuoted">Price Quoted:</label>
+            <input type="number" id="priceQuoted" name="priceQuoted" required>
+        </div>
+        <div class="form-group">
+            <label for="variety">Variety:</label>
+            <input type="number" id="variety" name="variety" required>
+        </div>
+        <button type="submit" onclick="window.location.href ='index.html'">Submit</button>
+    </form>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Get form data
+            const formData = {
+                accountNumber: document.getElementById('accountNumber').value,
+                state: document.getElementById('state').value,
+                marketDistrict: document.getElementById('marketDistrict').value,
+                commodity: document.getElementById('commodity').value,
+                priceQuoted: document.getElementById('priceQuoted').value
+            };
+
+            // Send form data to server
+            fetch('/submitForm', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                console.log('Form data submitted successfully');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+            // Reset form after submission
+            document.getElementById('dataForm').reset();
+        }
+    </script>
+</body>
+</html>

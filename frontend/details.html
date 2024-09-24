@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Prediction</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Price Prediction</h1>
+        <form id="optionsForm">
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required><br><br>
+            <label for="district">District:</label>
+            <input type="text" id="district" name="district" required><br><br>
+            <label for="commodity">Commodity:</label>
+            <input type="text" id="commodity" name="commodity" required><br><br>
+            <label for="variety">Variety:</label>
+            <input type="text" id="variety" name="variety" required><br><br>
+            <button type="submit">Get Prices</button>
+        </form>
+        <div id="outputContainer" style="display: none;">
+            <h2>Best Prices</h2>
+            <div id="priceTable"></div>
+        </div>
+    </div>
+    <script src="details.js"></script>
+</body>
+</html>

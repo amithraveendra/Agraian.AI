@@ -1,0 +1,127 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://img.freepik.com/free-photo/crop-growing_1160-366.jpg?w=996&t=st=1710930333~exp=1710930933~hmac=0f6b8eb782bcafce9c1853d9288c4ef164c20168f3683fdd0f57a6b013377708);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.header-container {
+    
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+/* styles.css */
+
+/* Header with background image */
+.header-container {
+ /* Specify the path to your background image */
+    /* Center the background image */
+    color:#006400; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 50px 0; /* Add padding as needed */
+    padding-right: 50px;
+}
+
+/* Style for the header text */
+.header-container h1 {
+    font-size: 50px; /* Adjust font size */
+    font-weight: bold; /* Bold font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
+}
+
+.header-container h1 {
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+/* styles.css */
+
+/* Footer with background image */
+.footer-container {
+    /* Center the background image */
+    color:#000000; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 50px 0;
+    font-size: 20px; /* Add padding as needed */
+}
+
+/* Style for the footer text */
+.footer-container nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-container nav ul li a {
+    color:#000000; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-container nav ul li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+footer {
+   
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#description {
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+#options {
+    text-align: center;
+}
+
+.login-options {
+    display: flex;
+    justify-content: center;
+}
+
+.login-options a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #fff;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-options a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
